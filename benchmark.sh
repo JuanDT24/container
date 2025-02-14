@@ -1,5 +1,5 @@
 #! /bin/bash
-git clone https://github.com/JuanDT24/container.git tests
+git clone https://github.com/JuanDT24/tests.git tests
 
 echo "Benchmark results" 
 echo "-----------------"
