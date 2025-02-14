@@ -5,6 +5,7 @@ services:
     image: alpine:latest
     container_name: benchmark-runner
     volumes:
-      - .:/host
-    working_dir: /host
-    command: ["/bin/sh", "-c", "chmod +x benchmark.sh && ./benchmark.sh"]
+      - .:/host  
+    working_dir: /host  
+    entrypoint: ["/bin/sh", "-c"]
+    command: ["chmod +x benchmark.sh && ./benchmark.sh"]
