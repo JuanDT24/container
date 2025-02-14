@@ -16,4 +16,4 @@ for lang in tests/*; do
         echo "#$TIME_OUTPUT"
 done
 
-echo results.txt
+cat results.txt
