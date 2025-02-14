@@ -6,7 +6,7 @@ echo "-----------------"
 for lang in tests/*; do
     echo "$lang:"
     echo "${lang}_benchmark"
-    docker build -t "${lang}_benchmark" "$lang"
+    docker build --no-cache -t "${lang}_benchmark" "$lang"
     docker run --rm -v "$(pwd):/app" "${lang}_benchmark"
     cat "$lang/output.txt"
     echo "----------"
