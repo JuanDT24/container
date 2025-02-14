@@ -5,6 +5,6 @@ echo "Benchmark results"
 echo "-----------------"
 for lang in tests/*; do
     echo "$lang:"
-    cat "./$lang/${lang}_output.txt"
+    cat "./$lang/output.txt"
     echo "----------"
 done
