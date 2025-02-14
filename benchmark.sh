@@ -1,5 +1,5 @@
 #! /bin/bash
-git clone https://github.com/JuanDT24/tests.git tests
+git clone https://github.com/JuanDT24/Fibonacci.git tests
 
 echo "Benchmark results" 
 echo "-----------------"
