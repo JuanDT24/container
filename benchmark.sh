@@ -15,3 +15,5 @@ for lang in tests/*; do
         echo "$lang_name: $TIME_OUTPUT" >> results.txt
         echo "#$TIME_OUTPUT"
 done
+
+echo results.txt
