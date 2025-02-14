@@ -4,7 +4,7 @@ git clone https://github.com/JuanDT24/Fibonacci.git tests
 echo "" > results.txt
 echo "Benchmark results" 
 echo "-----------------"
-for lang in c java js python php; do
+for lang in tests/*; do
      lang_name=$(basename "$lang")
         echo "Ejecutando $lang_name..."
 
