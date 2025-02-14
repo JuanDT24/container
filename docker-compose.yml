@@ -1,28 +1,10 @@
 version: "3.8"
 
 services:
-  python:
-    container_name: python-container
-    build: ./python
+  benchmark:
+    image: alpine:latest
+    container_name: benchmark-runner
     volumes:
-      - ./python:/host
-  java:
-    container_name: java-container
-    build: ./java
-    volumes:
-      - ./java:/host
-  javascript:
-    container_name: javascript-container
-    build: ./javascript
-    volumes:
-      - ./javascript:/host
-  c:
-    container_name: c-container
-    build: ./c
-    volumes:
-      - ./c:/host
-  php:
-    container_name: php-container
-    build: ./php
-    volumes:
-      - ./php:/host
+      - .:/host
+    working_dir: /host
+    command: ["/bin/sh", "-c", "chmod +x benchmark.sh && ./benchmark.sh"]
